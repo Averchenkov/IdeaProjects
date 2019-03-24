@@ -230,6 +230,25 @@ public class Interface extends JFrame {
             }
             if ((e.getSource() == bmkmp) && !desired.getText().trim().isEmpty()){
 
+                int f = methodBMplusKMP(massiv.getText(), desired.getText());
+                if (f != 0) {
+                    res.setText("Yes - " + f);
+                }
+                else
+                    res.setText("No");
+            }
+            if ((e.getSource() == bmkmp) && desired.getText().trim().isEmpty()){
+                long sumBMKMP = 0;
+                int maxBMKMP = 0;
+                for (int i = 0; i < massiv.getText().length(); i++) {
+                    for (int j = i + 1; j < massiv.getText().length(); j++) {
+                        int k  = methodBMplusKMP(massiv.getText(), massiv.getText().substring(i, j));
+                        sumBMKMP += k;
+                        maxBMKMP = Math.max(maxBMKMP, k);
+                    }
+                }
+                double sredsumBMKMP = (double) ((double)(sumBMKMP * 2 / massiv.getText().length()) / (massiv.getText().length() - 1));
+                res.setText(sredsumBMKMP + " " + maxBMKMP);
             }
         }
     }
@@ -274,9 +293,44 @@ public class Interface extends JFrame {
         return -1;
     }
 
-    public int methodBM(String massiv, String obraz)
+    public int methodBMplusKMP(String massiv, String obraz) {
+        int pi[] = new int[256];
+        for (int i = 0; i < 256; i++) {
+            pi[i] = obraz.length();
+        }
 
-    {
+        for (int i = obraz.length() - 2; i >= 0; i--) {
+            if (pi[(int) obraz.charAt(i)] == obraz.length()){
+                pi[(int) obraz.charAt(i)] = obraz.length() - i - 1;
+            }
+        }
+
+
+        int i = obraz.length() - 1;
+        int j = i;
+        int count = 0;
+
+        while (i < massiv.length() && j >= 0){
+            count++;
+            if (massiv.charAt(i) != obraz.charAt(j)){
+                if (j == obraz.length() - 1){
+                    i += pi[(int) massiv.charAt(i)];
+                }
+                else {
+                    i += pi[(int) obraz.charAt(obraz.length() - 1)] + obraz.length() - j - 1;
+                    j = obraz.length() - 1;
+                }
+            }
+            else {
+                if (j == 0) return (int)(count * 0.8947);
+                i--;
+                j--;
+            }
+        }
+        return 0;
+    }
+
+    public int methodBM(String massiv, String obraz) {
         int pi[] = new int[256];
         for (int i = 0; i < 256; i++) {
             pi[i] = obraz.length();
@@ -335,7 +389,4 @@ public class Interface extends JFrame {
         }
         return 0;
     }
-
-
-
 }
