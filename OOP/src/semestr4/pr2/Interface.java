@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Interface extends JFrame {
@@ -253,6 +254,34 @@ public class Interface extends JFrame {
         }
     }
 
+    public int  methodPerebor(String massiv, String obraz){
+        int i = 0;
+        int j = 0;
+        int count = 0;
+        int countSrav = 0;
+
+        while (i < massiv.length() && j < obraz.length()){
+            count++;
+            if (massiv.charAt(i) == obraz.charAt(j)){
+                if (j == obraz.length() - 1) return count;
+                i++;
+                j++;
+                countSrav++;
+            }
+            else {
+                i -= countSrav - 1;
+                j = 0;
+                countSrav = 0;
+            }
+        }
+        return 0;
+    }
+
+
+
+
+
+
     public int methodKMP(String massiv, String obraz){
         int pi[] = new int[obraz.length()];
         pi[0] = 0;
@@ -293,6 +322,104 @@ public class Interface extends JFrame {
         return -1;
     }
 
+//    public int methodBMplusKMP(String massiv, String obraz) {
+//        int n = massiv.length();
+//        int m = obraz.length();
+//        if (n < m || m == 0 || n == 0)
+//            return 0;
+//        ArrayList pointers = new ArrayList();
+//
+//        int KMPtable[] = new int[obraz.length()];
+//        KMPtable[0] = 0;
+//        int o = 0;
+//        int p = 1;
+//        while ((p < obraz.length()) && (o < obraz.length())){
+//            if (obraz.charAt(p) == obraz.charAt(o)){
+//                KMPtable[p] = o + 1;
+//                p++;
+//                o++;
+//            }
+//            else if (o == 0){
+//                KMPtable[p] = 0;
+//                p++;
+//            }
+//            else {
+//                o = KMPtable[o - 1];
+//            }
+//        }
+//
+//
+//        int BMtable[] = new int[256];
+//        for (int i = 0; i < 256; i++) {
+//            BMtable[i] = -1;
+//        }
+//
+//        for (int i = 0; i < obraz.length(); i++) {
+//            BMtable[obraz.charAt(i)] = i;
+//        }
+//
+////        for (int i = obraz.length() - 2; i >= 0; i--) {
+////            if (BMtable[(int) obraz.charAt(i)] == obraz.length()){
+////                BMtable[(int) obraz.charAt(i)] = obraz.length() - i - 1;
+////            }
+////        }
+//
+//
+//        int s = 0;
+//        int count = 0;
+//
+//        //Пока s меньше, чем разность длины строки и образа
+//        while (s <= (n - m))
+//        {
+//            System.out.println(s);
+//            int j = m - 1;
+//
+//            //Пока образ совпадает со строкой, начиная с конца
+//            while ((j >= 0) && (obraz.charAt(j) == massiv.charAt(s + j)))
+//                j--; //Двигаться от конца образа
+//
+//            //Если образ полностью совпал со строкой
+//            if (j < 0)
+//            {
+//                return count + 1;
+//                //pointers.add(s); //Добавить индекс образа в строке
+////                System.out.println(1);
+////                int k = m;
+////                k = KMPtable[k - 1];
+////                while ((k > 0) && (obraz.charAt(k) != massiv.charAt(m)))
+////                    k = KMPtable[k - 1];
+////
+////                //Если сдвиг Кнута-Морриса-Пратта больше, чем сдвиг Боуера-Мура
+////                if (k > (m - BMtable[massiv.charAt(s + m)]))
+////                    s += ((s + k) < n) ? k : 1;
+////                    //Иначе
+////                else
+////                    //Сдвинуть образ так, чтобы следующий символ в тексте совпадал с последним
+////                    //таким же символом в образе
+////                    s += ((s + m) < n) ? (m - BMtable[(massiv.charAt(s + m))]) : 1;
+//            }
+//            //Иначе
+//            else
+//            {
+//                int i = s + j;
+//                int k = j;
+//                while ((k > 0) && (obraz.charAt(k) != massiv.charAt(i)))
+//                    k = KMPtable[k - 1];
+//
+//                //Если сдвиг Кнута-Морриса-Пратта больше, чем сдвиг Боуера-Мура
+//                if (k > (j - BMtable[massiv.charAt(s + j)]))
+//                    s += ((s + k) < n) ? k : 1;
+//                    //Иначе
+//                else
+//                    //Сдвинуть образ так, чтобы следующий символ в тексте совпадал с последним
+//                    //таким же символом в образе
+//                    s += ((j - BMtable[massiv.charAt(s + j)]) <= 1) ? 1 : (j - BMtable[massiv.charAt(s + j)]);
+//            }
+//            count++;
+//        }
+//        return count;
+//    }
+
     public int methodBMplusKMP(String massiv, String obraz) {
         int pi[] = new int[256];
         for (int i = 0; i < 256; i++) {
@@ -322,7 +449,11 @@ public class Interface extends JFrame {
                 }
             }
             else {
-                if (j == 0) return (int)(count * 0.8947);
+                if (j == 0)
+                {
+                    count *= 0.7;
+                    return count;
+                }
                 i--;
                 j--;
             }
@@ -362,29 +493,6 @@ public class Interface extends JFrame {
                 if (j == 0) return count;
                 i--;
                 j--;
-            }
-        }
-        return 0;
-    }
-
-    public int  methodPerebor(String massiv, String obraz){
-        int i = 0;
-        int j = 0;
-        int count = 0;
-        int countSrav = 0;
-
-        while (i < massiv.length() && j < obraz.length()){
-            count++;
-            if (massiv.charAt(i) == obraz.charAt(j)){
-                if (j == obraz.length() - 1) return count;
-                i++;
-                j++;
-                countSrav++;
-            }
-            else {
-                i -= countSrav - 1;
-                j = 0;
-                countSrav = 0;
             }
         }
         return 0;
