@@ -1,0 +1,88 @@
+
+T	java:S106O"9Replace this use of System.out or System.err by a logger.(÷ëğC8Í¹Ôò¡.
+Z	java:S106x"9Replace this use of System.out or System.err by a logger.(®²îÂøÿÿÿÿ8Í¹Ôò¡.
+U	java:S106&"9Replace this use of System.out or System.err by a logger.(ÿôêğ8Í¹Ôò¡.
+K
+java:S1199ƒ"-Extract this nested code block into a method.(ìş€¤8Í¹Ôò¡.
+[	java:S106"9Replace this use of System.out or System.err by a logger.(‘¹¾¬úÿÿÿÿ8Í¹Ôò¡.
+[	java:S106“"9Replace this use of System.out or System.err by a logger.(šñâÄùÿÿÿÿ8Í¹Ôò¡.
+J
+java:S1199s"-Extract this nested code block into a method.(¹Š¯¾8Í¹Ôò¡.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ıÄ¥ä8Í¹Ôò¡.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÿ´¹¼øÿÿÿÿ8Í¹Ôò¡.
+U	java:S106="9Replace this use of System.out or System.err by a logger.(™€ø‚8Í¹Ôò¡.
+K
+java:S1199ª"-Extract this nested code block into a method.(¿–Ğ•8Í¹Ôò¡.
+>	java:S131˜""Add a default case to this switch.(€ä¿;8Í¹Ôò¡.
+[	java:S106"9Replace this use of System.out or System.err by a logger.(õœ‘øÿÿÿÿ8Í¹Ôò¡.
+Z	java:S106E"9Replace this use of System.out or System.err by a logger.(ÖÇ½¢ÿÿÿÿÿ8Í¹Ôò¡.
+V	java:S106‰"9Replace this use of System.out or System.err by a logger.(±Ãé½8Í¹Ôò¡.
+R
+java:S3740•"/Provide the parametrized type for this generic.(°×Õ®şÿÿÿÿ8Í¹Ôò¡.
+p
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(“ºÏ8Í¹Ôò¡.
+[	java:S106®"9Replace this use of System.out or System.err by a logger.(õœ‘øÿÿÿÿ8Í¹Ôò¡.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ë»õ‡üÿÿÿÿ
+Q
+java:S3740z"/Provide the parametrized type for this generic.(°×Õ®şÿÿÿÿ8Í¹Ôò¡.
+U	java:S106„"9Replace this use of System.out or System.err by a logger.(Ì‘µ8Í¹Ôò¡.
+V	java:S106’"9Replace this use of System.out or System.err by a logger.(á˜“8Í¹Ôò¡.
+K
+java:S1199™"-Extract this nested code block into a method.(¹Š¯¾8Í¹Ôò¡.
+J
+java:S1199"-Extract this nested code block into a method.(ôÈêİ8Í¹Ôò¡.
+Z	java:S106c"9Replace this use of System.out or System.err by a logger.(ƒ§­–ıÿÿÿÿ8Í¹Ôò¡.
+i	java:S128ƒ"LEnd this switch case with an unconditional break, return or throw statement.(ìş€¤8Í¹Ôò¡.
+U	java:S106n"9Replace this use of System.out or System.err by a logger.(…Ş¼Æ8Í¹Ôò¡.
+Z	java:S106."9Replace this use of System.out or System.err by a logger.(¦¥”Ôùÿÿÿÿ8Í¹Ôò¡.
+Z	java:S106""9Replace this use of System.out or System.err by a logger.(òÌË½ıÿÿÿÿ8Í¹Ôò¡.
+V	java:S106³"9Replace this use of System.out or System.err by a logger.(±Ãé½8Í¹Ôò¡.
+O
+java:S1199S"-Extract this nested code block into a method.(Î‚§ıÿÿÿÿ8Í¹Ôò¡.
+U	java:S1066"9Replace this use of System.out or System.err by a logger.(Ç®ğ¦8Í¹Ôò¡.
+U	java:S106M"9Replace this use of System.out or System.err by a logger.(ÅÈ¿Ğ8Í¹Ôò¡.
+Z	java:S106]"9Replace this use of System.out or System.err by a logger.(‰³Õòıÿÿÿÿ8Í¹Ôò¡.
+Z	java:S1067"9Replace this use of System.out or System.err by a logger.(¹ÄÌøúÿÿÿÿ8Í¹Ôò¡.
+U	java:S106p"9Replace this use of System.out or System.err by a logger.(àÉşî8Í¹Ôò¡.
+[	java:S106‘"9Replace this use of System.out or System.err by a logger.(¢…¬Øûÿÿÿÿ8Í¹Ôò¡.
+[	java:S106¦"9Replace this use of System.out or System.err by a logger.(õœ‘øÿÿÿÿ8Í¹Ôò¡.
+J
+java:S1199"-Extract this nested code block into a method.(ìş€¤8Í¹Ôò¡.
+J
+java:S1199C"-Extract this nested code block into a method.(ôÈêİ8Í¹Ôò¡.
+U	java:S106,"9Replace this use of System.out or System.err by a logger.(”ÌÓÑ8Í¹Ôò¡.
+Z	java:S106a"9Replace this use of System.out or System.err by a logger.(­ô›²üÿÿÿÿ8Í¹Ôò¡.
+U	java:S106T"9Replace this use of System.out or System.err by a logger.(…Ğîæ8Í¹Ôò¡.
+U	java:S106Y"9Replace this use of System.out or System.err by a logger.(ÿôêğ8Í¹Ôò¡.
+Z	java:S1065"9Replace this use of System.out or System.err by a logger.(ùï¸øÿÿÿÿ8Í¹Ôò¡.
+7
+java:S2178µ"Correct this "&" to "&&".(·ºî 8Í¹Ôò¡.
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(±µ³Ûşÿÿÿÿ8Í¹Ôò¡.
+Z	java:S106?"9Replace this use of System.out or System.err by a logger.(®Ø·¾øÿÿÿÿ8Í¹Ôò¡.
+J
+java:S1199;"-Extract this nested code block into a method.(¹Š¯¾8Í¹Ôò¡.
+7
+java:S2178µ"Correct this "&" to "&&".(·ºî 8Í¹Ôò¡.
+J
+java:S1199w"-Extract this nested code block into a method.(ôÈêİ8Í¹Ôò¡.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÀÅÎòøÿÿÿÿ8Í¹Ôò¡.
+8
+java:S3626h"Remove this redundant jump.(ûÁİ…8Í¹Ôò¡.
+J
+java:S1199"-Extract this nested code block into a method.(¹Š¯¾8Í¹Ôò¡.
+O
+java:S1199!"-Extract this nested code block into a method.(Î‚§ıÿÿÿÿ8Í¹Ôò¡.
+P
+java:S1199¡"-Extract this nested code block into a method.(ø©•Éüÿÿÿÿ8Í¹Ôò¡.
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(½È™Ü8Í¹Ôò¡.
+U	java:S1064"9Replace this use of System.out or System.err by a logger.(Å½Æê8Í¹Ôò¡.
+Z	java:S106G"9Replace this use of System.out or System.err by a logger.(¤Ç¥±şÿÿÿÿ8Í¹Ôò¡.
+Z	java:S106_"9Replace this use of System.out or System.err by a logger.(Èä¡‰ÿÿÿÿÿ8ÁµŸô¡.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(º­›Øûÿÿÿÿ8Í¹Ôò¡.
+J
+java:S1199K"-Extract this nested code block into a method.(ìş€¤8Í¹Ôò¡.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ñ¿³8Í¹Ôò¡.
+U	java:S106o"9Replace this use of System.out or System.err by a logger.(Êïµ¥8Í¹Ôò¡.
+V	java:S106‡"9Replace this use of System.out or System.err by a logger.(á¤Ñ¸8Í¹Ôò¡.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(È©¡ã8Í¹Ôò¡.
